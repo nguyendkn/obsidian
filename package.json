@@ -1,0 +1,43 @@
+{
+  "name": "obsidian-arch",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Independent reimplementation of the Obsidian desktop architecture (educational)",
+  "license": "MIT",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "node esbuild.config.mjs",
+    "watch": "node esbuild.config.mjs --watch",
+    "start": "npm run build && electron .",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/d3-force": "^3.0.10",
+    "@types/js-yaml": "^4.0.9",
+    "@types/markdown-it": "^14.1.2",
+    "@types/node": "^22.9.0",
+    "@types/prismjs": "^1.26.5",
+    "electron": "^33.2.0",
+    "esbuild": "^0.24.0",
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "@codemirror/autocomplete": "^6.18.4",
+    "@codemirror/commands": "^6.7.1",
+    "@codemirror/lang-markdown": "^6.3.1",
+    "@codemirror/language": "^6.10.1",
+    "@codemirror/language-data": "^6.5.1",
+    "@codemirror/search": "^6.5.4",
+    "@codemirror/state": "^6.5.0",
+    "@codemirror/view": "^6.35.0",
+    "@lezer/highlight": "^1.2.1",
+    "chokidar": "^4.0.1",
+    "d3-force": "^3.0.0",
+    "js-yaml": "^4.1.0",
+    "katex": "^0.16.11",
+    "markdown-it": "^14.1.0",
+    "markdown-it-footnote": "^4.0.0",
+    "markdown-it-task-lists": "^2.1.1",
+    "prismjs": "^1.29.0"
+  }
+}

@@ -1,0 +1,279 @@
+/* Workspace shell: sidebars, center column, tab bar, leaves, view headers. */
+.workspace {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.workspace-sidebar {
+  width: 260px;
+  flex: 0 0 auto;
+  background: var(--bg-secondary);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.workspace-sidebar-left {
+  border-right: 1px solid var(--border);
+}
+
+.workspace-sidebar-right {
+  border-left: 1px solid var(--border);
+}
+
+.workspace-center {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-primary);
+}
+
+.tab-bar {
+  height: var(--tab-height);
+  flex: 0 0 auto;
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  padding: 0 8px;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-app-region: drag;
+  scrollbar-width: none;
+}
+
+.tab-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.tab-bar.is-empty {
+  background: var(--bg-secondary);
+}
+
+.tab {
+  -webkit-app-region: no-drag;
+  height: calc(var(--tab-height) - 8px);
+  max-width: 200px;
+  min-width: 60px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 10px;
+  border-radius: var(--radius-s) var(--radius-s) 0 0;
+  color: var(--text-muted);
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: default;
+  user-select: none;
+  position: relative;
+}
+
+.tab:hover {
+  background: var(--bg-hover);
+}
+
+.tab.is-active {
+  background: var(--bg-primary);
+  color: var(--text-normal);
+}
+
+.tab[data-view-type='file-explorer']::before {
+  content: '▤';
+  opacity: 0.6;
+}
+
+.tab-close {
+  margin-left: auto;
+  width: 16px;
+  height: 16px;
+  line-height: 14px;
+  text-align: center;
+  border-radius: 3px;
+  color: var(--text-faint);
+  flex: 0 0 auto;
+}
+
+.tab-close:hover {
+  background: var(--bg-active);
+  color: var(--text-normal);
+}
+
+.workspace-main {
+  flex: 1 1 auto;
+  min-height: 0;
+  position: relative;
+  display: flex;
+}
+
+.leaf {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: none;
+  overflow: hidden;
+}
+
+.leaf.is-active {
+  display: flex;
+}
+
+.leaf > .view,
+.leaf > .view > .view-content {
+  flex: 1 1 auto;
+  min-height: 0;
+  min-width: 0;
+}
+
+.view {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.view-content {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.workspace-sidebar .leaf {
+  display: flex;
+  flex-direction: column;
+}
+
+/* View header (title row), used by note, explorer and backlink panes. */
+.view-header {
+  height: var(--header-height);
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 12px;
+  border-bottom: 1px solid transparent;
+  -webkit-app-region: drag;
+}
+
+.workspace-sidebar .view-header {
+  padding: 0 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+.view-header-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+  text-transform: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.view-header-action {
+  -webkit-app-region: no-drag;
+  margin-left: auto;
+  width: 22px;
+  height: 22px;
+  border: none;
+  border-radius: var(--radius-s);
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.view-header-action:hover {
+  background: var(--bg-hover);
+  color: var(--text-normal);
+}
+
+.inline-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-normal);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  user-select: none;
+  cursor: text;
+}
+
+.mode-toggle {
+  margin-left: auto;
+  -webkit-app-region: no-drag;
+  display: flex;
+  gap: 1px;
+  padding: 2px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-m);
+}
+
+.mode-toggle-item {
+  padding: 2px 9px;
+  border-radius: 5px;
+  font-size: 11px;
+  color: var(--text-muted);
+  cursor: pointer;
+  user-select: none;
+}
+
+.mode-toggle-item:hover {
+  color: var(--text-normal);
+}
+
+.mode-toggle-item.is-active {
+  background: var(--bg-active);
+  color: var(--text-normal);
+}
+
+.view-actions {
+  display: flex;
+  gap: 2px;
+}
+
+.view-action {
+  width: 26px;
+  height: 26px;
+  border: none;
+  border-radius: var(--radius-s);
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.view-action:hover {
+  background: var(--bg-hover);
+  color: var(--text-normal);
+}
+
+/* Boot splash shown before the app paints. */
+.boot-splash {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--bg-primary);
+  z-index: 100;
+}
+
+.boot-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.boot-subtitle {
+  font-size: 12px;
+  color: var(--text-faint);
+}

@@ -1,0 +1,13 @@
+{
+  "theme": "dark",
+  "editor": {
+    "livePreview": true,
+    "spellcheck": true,
+    "showLineNumbers": false,
+    "lineWidth": 700,
+    "fontSize": 16
+  },
+  "showInlineTitle": true,
+  "defaultMode": "preview",
+  "attachFolder": ""
+}

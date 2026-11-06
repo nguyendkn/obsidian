@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Build output (esbuild → dist/)
+dist/
+*.tsbuildinfo
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Env / secrets
+.env
+.env.*
+!.env.example
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Vault: keep config (app.json, appearance.json), ignore per-machine layout
+demo-vault/.obsidian/workspace.json
+demo-vault/.obsidian/workspace-mobile.json
+demo-vault/.trash/
+demo-vault/.DS_Store

@@ -1,0 +1,151 @@
+/* Source-mode editor (CodeMirror 6) and live-preview widgets. */
+.markdown-source {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: hidden;
+  background: var(--bg-primary);
+}
+
+.markdown-source .cm-editor {
+  height: 100%;
+  background: transparent;
+  color: var(--text-normal);
+  font-family: var(--font-text);
+}
+
+.markdown-source .cm-editor.cm-focused {
+  outline: none;
+}
+
+.markdown-source .cm-scroller {
+  overflow: auto;
+  padding-top: 4px;
+}
+
+.markdown-source .cm-content {
+  color: var(--text-normal);
+  font-size: var(--font-size-text);
+}
+
+.markdown-source .cm-line {
+  padding: 0 2px;
+}
+
+.markdown-source .cm-cursor,
+.markdown-source .cm-dropCursor {
+  border-left-color: var(--accent);
+}
+
+.markdown-source .cm-gutters {
+  background: transparent;
+  border: none;
+  color: var(--text-faint);
+  font-size: 11px;
+}
+
+.markdown-source .cm-activeLineGutter {
+  background: transparent;
+  color: var(--text-muted);
+}
+
+.markdown-source .cm-selectionBackground,
+.markdown-source .cm-content ::selection {
+  background: var(--selection) !important;
+}
+
+.markdown-source .cm-selectionMatch {
+  background: var(--bg-active);
+}
+
+.markdown-source .cm-searchMatch {
+  background: rgba(255, 208, 0, 0.25);
+  outline: 1px solid rgba(255, 208, 0, 0.5);
+}
+
+.markdown-source .cm-panels {
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
+  color: var(--text-normal);
+}
+
+.markdown-source .cm-panels input {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-s);
+  padding: 3px 6px;
+  outline: none;
+}
+
+/* Markdown syntax tokens inside the source editor */
+.markdown-source .tok-heading,
+.markdown-source .cm-header {
+  color: var(--text-normal);
+  font-weight: 650;
+}
+
+.markdown-source .tok-strong {
+  font-weight: 650;
+}
+
+.markdown-source .tok-emphasis {
+  font-style: italic;
+}
+
+.markdown-source .tok-link,
+.markdown-source .tok-url {
+  color: var(--accent);
+}
+
+.markdown-source .tok-meta,
+.markdown-source .tok-punctuation {
+  color: var(--text-faint);
+}
+
+.markdown-source .tok-quote {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.markdown-source .tok-monospace {
+  color: #d19a66;
+}
+
+.markdown-source .cm-inline-code {
+  padding: 1px 4px;
+  border-radius: var(--radius-s);
+  background: var(--code-bg);
+  color: #e06c75;
+  font-family: var(--font-monospace);
+  font-size: 0.9em;
+}
+
+.markdown-source .cm-tag {
+  color: var(--accent);
+  opacity: 0.9;
+}
+
+/* Inline image rendered by the live-preview extension */
+.cm-inline-image {
+  display: block;
+  margin: 6px 0;
+  max-width: 100%;
+}
+
+.cm-inline-image img {
+  max-width: 100%;
+  max-height: 420px;
+  border-radius: var(--radius-s);
+  display: block;
+}
+
+.markdown-source .cm-tooltip {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-s);
+  color: var(--text-normal);
+}
+
+.markdown-source .cm-tooltip-autocomplete > ul > li[aria-selected] {
+  background: var(--bg-active);
+  color: var(--text-normal);
+}

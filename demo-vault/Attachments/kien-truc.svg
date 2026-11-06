@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="360" viewBox="0 0 720 360">
+  <rect width="720" height="360" fill="#0f172a"/>
+  <text x="24" y="40" fill="#e2e8f0" font-family="ui-sans-serif,system-ui" font-size="20" font-weight="600">Vault · kiến trúc đồ thị</text>
+  <g stroke="#38bdf8" stroke-width="2" fill="none">
+    <line x1="360" y1="96" x2="200" y2="200"/>
+    <line x1="360" y1="96" x2="520" y2="200"/>
+    <line x1="200" y1="200" x2="280" y2="300"/>
+    <line x1="520" y1="200" x2="440" y2="300"/>
+    <line x1="200" y1="200" x2="520" y2="200"/>
+  </g>
+  <g font-family="ui-sans-serif,system-ui" font-size="14" fill="#e2e8f0" text-anchor="middle">
+    <circle cx="360" cy="96" r="34" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+    <text x="360" y="101">Home</text>
+    <circle cx="200" cy="200" r="30" fill="#1e293b" stroke="#a78bfa" stroke-width="2"/>
+    <text x="200" y="205">Projects</text>
+    <circle cx="520" cy="200" r="30" fill="#1e293b" stroke="#34d399" stroke-width="2"/>
+    <text x="520" y="205">Areas</text>
+    <circle cx="280" cy="300" r="26" fill="#1e293b" stroke="#fbbf24" stroke-width="2"/>
+    <text x="280" y="305">Daily</text>
+    <circle cx="440" cy="300" r="26" fill="#1e293b" stroke="#f472b6" stroke-width="2"/>
+    <text x="440" y="305">MOC</text>
+  </g>
+</svg>

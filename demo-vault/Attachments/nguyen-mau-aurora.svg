@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="320" viewBox="0 0 480 320">
+  <rect width="480" height="320" fill="#ffffff" stroke="#cbd5e1"/>
+  <g font-family="ui-sans-serif,system-ui" font-size="12" fill="#0f172a">
+    <rect x="16" y="16" width="448" height="40" rx="8" fill="#f1f5f9"/>
+    <text x="32" y="41" font-size="14" font-weight="600">Aurora · Dashboard</text>
+    <rect x="16" y="72" width="140" height="232" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="32" y="96" fill="#64748b">Điều hướng</text>
+    <rect x="172" y="72" width="140" height="110" rx="8" fill="#eff6ff" stroke="#bfdbfe"/>
+    <text x="188" y="100" fill="#1d4ed8">Tìm kiếm</text>
+    <rect x="324" y="72" width="140" height="110" rx="8" fill="#f0fdf4" stroke="#bbf7d0"/>
+    <text x="340" y="100" fill="#15803d">P95</text>
+    <rect x="172" y="194" width="292" height="110" rx="8" fill="#fefce8" stroke="#fef08a"/>
+    <text x="188" y="222" fill="#a16207">Biểu đồ sử dụng</text>
+  </g>
+</svg>
